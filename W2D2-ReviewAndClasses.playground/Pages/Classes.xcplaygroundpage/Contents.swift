@@ -126,6 +126,16 @@ class Bicycle1 {
     let numberOfGears: Double
     var currentGear: Int = 1
     
+    func gearUp() -> Int {
+        currentGear = currentGear + 1
+        return currentGear
+    }
+    
+    func gearDown() -> Int{
+        currentGear = currentGear - 1
+        return currentGear
+    }
+    
     init(gears: Double) {
         numberOfGears = gears
     }
@@ -133,7 +143,11 @@ class Bicycle1 {
 
 var myBicycle = Bicycle1(gears: 20)
 
-
+myBicycle.currentGear
+myBicycle.gearDown()
+myBicycle.gearUp()
+myBicycle.gearUp()
+myBicycle.numberOfGears
 
 
 
