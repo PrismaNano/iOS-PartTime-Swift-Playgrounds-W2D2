@@ -49,21 +49,36 @@ box1.area()
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
 
-
+class Bicycle {
+    
+    var numberOfGears: Int = 20
+    var currentGear: Int = 1
+    
+    func gearUp() -> Int {
+        currentGear = currentGear + 1
+        return currentGear
+    }
+    
+    func gearDown() -> Int{
+        currentGear = currentGear - 1
+        return currentGear
+    }
+    
+}
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
-//
-//myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
-//
-//print("my bike is in the \(myBike.currentGear)rd gear")
+var myBike = Bicycle()
+
+myBike.numberOfGears = 16 // upgrade!
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
+
+print("my bike is in the \(myBike.currentGear)rd gear")
 
 
 //: ## Challenge 2
@@ -107,7 +122,16 @@ brightBulb.watts
 //:
 //: Hint: don't forget to supply a number of gears when you create your bicycles!
 
+class Bicycle1 {
+    let numberOfGears: Double
+    var currentGear: Int = 1
+    
+    init(gears: Double) {
+        numberOfGears = gears
+    }
+}
 
+var myBicycle = Bicycle1(gears: 20)
 
 
 
@@ -127,8 +151,19 @@ brightBulb.watts
 //:
 //: Hint: height * width * depth = the area of a cube
 
+class Cube : Box {
+    var depth: Double = 0.0
+    
+    override func area() -> Double {
+        return height * width * depth
+    }
+}
 
+let answer = Cube()
 
-
+answer.height = 4.5
+answer.width = 3.2
+answer.depth = 6.4
+answer.area()
 //: DONE!!! - Head back to compass to do today's tutorial.
 
